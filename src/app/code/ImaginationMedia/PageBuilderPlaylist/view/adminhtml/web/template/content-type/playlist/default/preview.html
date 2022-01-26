@@ -1,0 +1,14 @@
+<!-- preview.html -->
+<div attr="data.main.attributes"
+     ko-style="data.main.style"
+     class="pagebuilder-content-type"
+     event= "{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template" />
+    <div if="data.link.attributes().href">
+        <iframe attr = "{src : setLink(data.link.attributes().href)}" fra
+                width="100%" height="80" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+    <div if="!data.link.attributes().href" class="playlist-auth-failure-placeholder"><p translate="yes">Please insert the playlist link!</p></div>
+</div>
